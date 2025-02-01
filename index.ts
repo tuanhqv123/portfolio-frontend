@@ -20,8 +20,9 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      // ...other origins...
-    ],
+      "http://localhost:5001",
+      process.env.FRONTEND_URL,
+    ].filter(Boolean),
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
