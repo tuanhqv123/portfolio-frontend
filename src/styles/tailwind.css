@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-claude-surface-light dark:bg-claude-surface-dark rounded-xl shadow-lg p-6
+           border border-claude-border-light dark:border-claude-border-dark transition-colors;
+  }
+
+  .section-title {
+    @apply text-3xl font-display font-bold text-claude-text-light-primary dark:text-claude-text-dark-primary mb-6;
+  }
+
+  .section-text {
+    @apply text-lg text-claude-text-light-secondary dark:text-claude-text-dark-secondary;
+  }
+
+  .blog-post {
+    @apply bg-[#f5efe6] rounded-2xl shadow-lg overflow-hidden hover:shadow-[0_0_30px_rgba(0,0,0,0.1)] transition-all duration-300;
+  }
+
+  .blog-post-title {
+    @apply text-3xl font-greeting font-bold mb-6 text-claude-text-light-primary;
+  }
+
+  .blog-post-summary {
+    @apply text-lg text-claude-text-light-secondary font-content mb-6 leading-relaxed;
+  }
+
+  .blog-post-author {
+    @apply text-sm text-claude-text-light-tertiary font-content;
+  }
+
+  .blog-post-link {
+    @apply text-claude-text-light-primary hover:text-claude-text-light-secondary transition-colors;
+  }
+}
+
+.font-fira-code {
+  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono",
+    monospace;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

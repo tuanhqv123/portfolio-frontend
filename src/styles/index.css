@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-claude-background-dark text-claude-text-light-primary dark:text-claude-text-dark-primary;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-claude-primary text-white rounded-lg hover:bg-claude-primary/90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 border border-claude-border-light dark:border-claude-border-dark rounded-lg
+           text-claude-text-light-secondary dark:text-claude-text-dark-secondary hover:bg-claude-border-light/10 
+           dark:hover:bg-claude-border-dark/10 transition-colors;
+  }
+}

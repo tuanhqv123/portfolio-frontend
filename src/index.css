@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* This accounts for the fixed header */
+}
+
+@layer base {
+  body {
+    @apply font-content antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-greeting;
+  }
+
+  p,
+  span,
+  a,
+  li {
+    @apply font-content;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  ::selection {
+    @apply bg-claude-primary/20 text-claude-primary dark:text-claude-primary;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-claude-primary text-white hover:bg-opacity-90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-claude-gray-100 text-claude-text-light-primary hover:bg-claude-gray-200 
+           dark:bg-claude-gray-800 dark:text-claude-text-dark-primary dark:hover:bg-claude-gray-700 
+           transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-claude-surface-dark rounded-3xl shadow-lg p-8
+           border border-claude-border-light dark:border-claude-border-dark transition-colors;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-600;
+}
