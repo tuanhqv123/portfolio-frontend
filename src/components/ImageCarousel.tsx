@@ -82,7 +82,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <button
             className="absolute left-2 top-1/2 transform -translate-y-1/2 
                      bg-black/50 p-1 sm:p-2 rounded-full hover:bg-black/70 transition-all z-10
-                     opacity-0 group-hover:opacity-100 sm:opacity-100"
+                     opacity-0 group-hover:opacity-100"
             onClick={handlePrevious}
           >
             <FiChevronLeft className="text-white w-4 h-4 sm:w-5 sm:h-5" />
@@ -90,7 +90,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           <button
             className="absolute right-2 top-1/2 transform -translate-y-1/2 
                      bg-black/50 p-1 sm:p-2 rounded-full hover:bg-black/70 transition-all z-10
-                     opacity-0 group-hover:opacity-100 sm:opacity-100"
+                     opacity-0 group-hover:opacity-100"
             onClick={handleNext}
           >
             <FiChevronRight className="text-white w-4 h-4 sm:w-5 sm:h-5" />
