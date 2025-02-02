@@ -136,7 +136,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-[#fffbf5]">
       <Header />
-      <div className="container mx-auto px-3 sm:px-4 py-12 sm:py-16 md:py-24 lg:py-32">
+      <div className="container mx-auto px-3 sm:px-4 py-16 sm:py-18 md:py-22 lg:py-28">
         <h1 className="text-lg sm:text-xl md:text-2xl font-greeting italic font-light mb-6 sm:mb-8 md:mb-16 text-center text-claude-text-light-primary">
           <p>"Ask, and it will be given to you</p>
           <p>seek, and you will find</p>
